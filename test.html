@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gdtcss-showcase</title>
+    <link rel="stylesheet" href="gdt.css">
+    <link rel="stylesheet" href="gdt.css-extended.css">
+</head>
+<body>
+    <nav>
+        <h1>
+            GDT.CSS - Showcase
+        </h1>
+        <div class="items">
+            <button>
+                Home
+            </button>
+            <button>
+                Downloads
+            </button>
+            <button>
+                Source
+            </button>
+            <button>
+                Examples
+            </button>
+        </div>
+        <div class="menu" id="navbar-menu">
+            <button>
+                ☰
+            </button>
+        </div>
+    </nav>
+    <div class="nav-menu-options" id="nav-menu-option-elm" style="height: 0px;">
+        <button>
+            Home
+        </button>
+        <button>
+            Downloads
+        </button>
+        <button>
+            Source
+        </button>
+        <button>
+            Examples
+        </button>
+    </div>
+    <script>
+        document.getElementById("navbar-menu").addEventListener('click', ()=>{
+            (document.getElementById("nav-menu-option-elm").style.height == "0px")?
+                document.getElementById("nav-menu-option-elm").style.height = document.getElementById("nav-menu-option-elm").scrollHeight + 'px' : document.getElementById("nav-menu-option-elm").style.height = '0px';
+        })
+    </script>
+
+
+
+<!-- More widgets -->
+<div class="gdt-card">
+    <h2>Widgets</h2>
+
+    <button class="gdt-btn gdt-btn-primary">Primary</button>
+    <button class="gdt-btn gdt-btn-secondary">Secondary</button>
+    <button class="gdt-btn gdt-btn-outline">Outline</button>
+
+    <br><br>
+    <input class="gdt-input" placeholder="Type something...">
+
+    <br><br>
+    <div class="gdt-switch" onclick="this.classList.toggle('active')"></div>
+
+    <br><br>
+    <div class="gdt-alert gdt-alert-info">This is an info alert.</div>
+    <div class="gdt-alert gdt-alert-success">Success!</div>
+    <div class="gdt-alert gdt-alert-warning">Warning!</div>
+    <div class="gdt-alert gdt-alert-error">Error!</div>
+</div>
+
+
+<!-- Modal -->
+<div class="gdt-modal-bg" id="modal">
+    <div class="gdt-modal">
+        <h3>Modal Title</h3>
+        <p>This is a modal message.</p>
+        <button class="gdt-btn gdt-btn-primary" onclick="document.getElementById('modal').classList.remove('show')">Close</button>
+    </div>
+</div>
+
+<button class="gdt-btn gdt-btn-primary" onclick="document.getElementById('modal').classList.add('show')">Open Modal</button>
+
+<!-- Drop down -->
+<h2>Dropdown</h2>
+
+<div class="gdt-dropdown">
+    <button class="gdt-btn gdt-btn-primary gdt-dropdown-btn">
+        Menu ▼
+    </button>
+
+    <div class="gdt-dropdown-menu">
+        <button>Profile</button>
+        <button>Settings</button>
+        <button>Logout</button>
+    </div>
+</div>
+
+
+<!-- Accordian -->
+<h2>Accordion</h2>
+
+<div class="gdt-accordion-item">
+    <div class="gdt-accordion-header">Section 1</div>
+    <div class="gdt-accordion-content">
+        <p>This is the first accordion section.</p>
+    </div>
+</div>
+
+<div class="gdt-accordion-item">
+    <div class="gdt-accordion-header">Section 2</div>
+    <div class="gdt-accordion-content">
+        <p>This is the second accordion section.</p>
+    </div>
+</div>
+
+
+<h2>Tabs</h2>
+
+<div class="gdt-tabs">
+    <div class="gdt-tab active" onclick="gdtOpenTab(0)">Tab 1</div>
+    <div class="gdt-tab" onclick="gdtOpenTab(1)">Tab 2</div>
+    <div class="gdt-tab" onclick="gdtOpenTab(2)">Tab 3</div>
+</div>
+
+<div class="gdt-tab-content show">
+    <p>This is content for Tab 1.</p>
+</div>
+
+<div class="gdt-tab-content">
+    <p>This is content for Tab 2.</p>
+</div>
+
+<div class="gdt-tab-content">
+    <p>This is content for Tab 3.</p>
+</div>
+
+<!-- Progress bar -->
+<h2>Progress Bar</h2>
+
+<div class="gdt-progress">
+    <div class="gdt-progress-inner" id="progress-inner"></div>
+</div>
+
+<br>
+
+<button class="gdt-btn gdt-btn-primary" onclick="fillProgress()">Fill 70%</button>
+
+<script>
+function fillProgress() {
+    document.getElementById("progress-inner").style.width = "70%";
+}
+</script>
+
+
+<!-- Badge -->
+<h2>Badges</h2>
+
+<span class="gdt-badge">New</span>
+<span class="gdt-badge">Beta</span>
+<span class="gdt-badge">Verified</span>
+
+
+<!-- Tooltip -->
+<h2>Tooltip</h2>
+
+<div class="gdt-tooltip" data-tip="This is a tooltip!">
+    <button class="gdt-btn gdt-btn-outline">Hover me</button>
+</div>
+
+<!-- Sidebar -->
+<!-- <h2>Sidebar Example</h2>
+
+<div class="gdt-sidebar">
+    <button>Dashboard</button>
+    <button>Students</button>
+    <button>Classes</button>
+    <button>Settings</button>
+</div>
+
+<div style="margin-left: 270px; padding: 20px;">
+    <p>This is main content beside the sidebar.</p>
+</div> -->
+
+
+<!-- Grid system -->
+<h2>Grid Example</h2>
+
+<div class="gdt-row">
+    <div class="gdt-col gdt-col-3">
+        <div class="gdt-card">25%</div>
+    </div>
+    <div class="gdt-col gdt-col-3">
+        <div class="gdt-card">25%</div>
+    </div>
+    <div class="gdt-col gdt-col-3">
+        <div class="gdt-card">25%</div>
+    </div>
+    <div class="gdt-col gdt-col-3">
+        <div class="gdt-card">25%</div>
+    </div>
+</div>
+
+
+
+<!-- Extended -->
+<!-- ========================= -->
+<!--        PAGINATION         -->
+<!-- ========================= -->
+<h2>Pagination</h2>
+<div class="gdt-pagination">
+    <button class="gdt-page-btn">Prev</button>
+    <button class="gdt-page-btn active">1</button>
+    <button class="gdt-page-btn">2</button>
+    <button class="gdt-page-btn">3</button>
+    <button class="gdt-page-btn">Next</button>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--           TABLE           -->
+<!-- ========================= -->
+<h2>Styled Table</h2>
+<table class="gdt-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>Alice</td>
+            <td><span class="gdt-badge">Active</span></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Bob</td>
+            <td><span class="gdt-badge">Offline</span></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Charlie</td>
+            <td><span class="gdt-badge">Busy</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+<!-- ========================= -->
+<!--          SPINNER          -->
+<!-- ========================= -->
+<h2>Loading Spinner</h2>
+<div class="gdt-spinner"></div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--        TOAST ALERT        -->
+<!-- ========================= -->
+<h2>Toast Notification</h2>
+<button class="gdt-btn gdt-btn-primary" onclick="showToast()">Show Toast</button>
+
+<div class="gdt-toast" id="gdt-toast">This is a toast message!</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--         AVATAR            -->
+<!-- ========================= -->
+<h2>Avatar</h2>
+<div class="gdt-avatar-group">
+    <div class="gdt-avatar">A</div>
+    <div class="gdt-avatar">K</div>
+    <div class="gdt-avatar">M</div>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--        CHAT BUBBLES       -->
+<!-- ========================= -->
+<h2>Chat Bubbles</h2>
+
+<div class="gdt-chat-bubble left">
+    Hello! How are you?
+</div>
+
+<div class="gdt-chat-bubble right">
+    I'm good! Working on your UI framework 😎
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--          TIMELINE         -->
+<!-- ========================= -->
+<h2>Timeline</h2>
+
+<div class="gdt-timeline">
+    <div class="gdt-timeline-item">
+        <div class="dot"></div>
+        <div class="content">Project created</div>
+    </div>
+    <div class="gdt-timeline-item">
+        <div class="dot"></div>
+        <div class="content">UI framework started</div>
+    </div>
+    <div class="gdt-timeline-item">
+        <div class="dot"></div>
+        <div class="content">Wave 3 delivered 🚀</div>
+    </div>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--          STEPPER          -->
+<!-- ========================= -->
+<h2>Stepper</h2>
+
+<div class="gdt-stepper">
+    <div class="gdt-step active">1</div>
+    <div class="gdt-step">2</div>
+    <div class="gdt-step">3</div>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--       BREADCRUMBS         -->
+<!-- ========================= -->
+<h2>Breadcrumb Navigation</h2>
+
+<div class="gdt-breadcrumb">
+    <span>Home</span> >
+    <span>Dashboard</span> >
+    <span class="active">Settings</span>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--        FILE UPLOADER      -->
+<!-- ========================= -->
+<h2>File Upload</h2>
+
+<label class="gdt-upload">
+    <input type="file">
+    <span>Choose a file</span>
+</label>
+
+<br><br>
+
+<!-- ========================= -->
+<!--       NOTIFICATION BELL   -->
+<!-- ========================= -->
+<h2>Notification Bell</h2>
+
+<div class="gdt-bell">
+    🔔
+    <span class="gdt-bell-badge">3</span>
+</div>
+
+<br><br>
+
+<!-- ========================= -->
+<!--         RANGE SLIDER      -->
+<!-- ========================= -->
+<h2>Range Slider</h2>
+
+<input type="range" class="gdt-range">
+
+<br><br>
+
+<!-- ========================= -->
+<!--           MENU            -->
+<!-- ========================= -->
+<h2>Context Menu</h2>
+
+<div class="gdt-context-area" id="ctxArea">
+    Right-click here
+</div>
+
+<ul class="gdt-context-menu" id="ctxMenu">
+    <li>Cut</li>
+    <li>Copy</li>
+    <li>Paste</li>
+</ul>
+
+
+
+
+</body>
+
+<script src="gdt.css.js"></script>
+<script src="gdt.css-extended.js"></script>
+</html>

@@ -1,0 +1,529 @@
+/*
+ * Goblin's Demonic Tiny CSS Framework For Web Development
+ * Licensed under the MIT License
+ * Copyright (c) ghgltggamer
+ * This file only contains the structure of the widgets - No theming is defined here
+ */
+
+:root{
+    --page-background: rgb(232, 232, 232);
+    --page-text-color: dimgray;
+    --page-font-name: Arial, Monospace;
+    --page-primary-color: rgb(0, 77, 154);
+    --page-secondary-color: rgb(0, 100, 199);
+    --page-teritary-color: rgb(0, 128, 255);
+    --page-primary-text-color: white;
+    --page-secondary-text-color: white;
+    --page-teritary-text-color: white;
+    --page-shadow-color: rgba(0, 0, 0, 0.25);
+    --page-highlight-color: rgba(0, 128, 255, 0.05);
+    --page-highlight-color-shade2: rgba(0, 128, 255, 0.1);
+    --page-nonhighlight-color: white;
+    --page-text-hover-color: dodgerblue;
+    --page-background-main-color: rgb(255, 255, 255);
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.4s;
+}
+
+body{
+    background: var(--page-background);
+    font-family: var(--page-font-name);
+    color: var(--page-text-color);
+    margin: 0px;
+}
+
+nav{
+    height: 70px;
+    display: flex;
+    background-color: var(--page-background-main-color);
+    box-shadow: 0px 0px 20px var(--page-shadow-color);
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav .items{
+    margin-left: auto;
+    color: var(--page-text-color);
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+nav .items:hover {
+    color: var(--page-text-hover-color);
+    cursor: pointer;
+}
+
+nav .menu{
+    margin-left: auto;
+}
+nav .menu button{
+    color: var(--page-text-color);
+    transition: 0.5s;
+    font-size: 15px;
+    display: hide;
+    border: 0px;
+    background-color: transparent;
+    font-size: 25px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav .menu button:hover {
+    color: var(--page-text-hover-color);
+    cursor: pointer;
+    background-color: var(--page-highlight-color);
+}
+nav .menu button:active {
+    color: var(--page-text-hover-color);
+    cursor: pointer;
+    background-color: var(--page-highlight-color-shade2);
+}
+
+nav .items button {
+    background-color: transparent;
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 0px;
+}
+nav .items button:hover{
+    color: var(--page-text-hover-color);
+    cursor: pointer;
+}
+
+.nav-menu-options{
+    height: 0px;
+    background-color: var(--page-background-main-color);
+    overflow: hidden;
+    box-sizing: border-box;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 20px 20px var(--page-shadow-color);
+}
+.nav-menu-options button{
+    width: 100%;
+    background: var(--page-background-main-color);
+    height: 50px;
+    cursor: pointer;
+    border: 0px;
+}
+.nav-menu-options button:hover{
+    background: var(--page-highlight-color);
+}
+.nav-menu-options button:active{
+    background: var(--page-highlight-color-shade2);
+}
+
+nav h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@media (max-width: 882px) {
+    nav .menu{
+        display: block;
+    }
+    nav .items{
+        display: none;
+    }
+}
+
+@media (min-width: 883px) {
+    nav .menu{
+        display: none;
+    }
+    nav .items{
+        display: block;
+    }
+}
+
+
+
+
+/* Extra widgets */
+
+/* ------------------------------------------------------
+ * GDT.CSS - Widgets Module
+ * Structure only — styling driven entirely by variables
+ * ------------------------------------------------------*/
+
+
+/* ========= Buttons ========= */
+
+.gdt-btn {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 6px var(--page-shadow-color);
+    transition: 0.25s;
+}
+
+/* Primary */
+.gdt-btn-primary {
+    background: var(--page-primary-color);
+    color: var(--page-primary-text-color);
+}
+.gdt-btn-primary:hover {
+    background: var(--page-secondary-color);
+}
+.gdt-btn-primary:active {
+    background: var(--page-teritary-color);
+}
+
+/* Secondary button */
+.gdt-btn-secondary {
+    background: var(--page-secondary-color);
+    color: var(--page-secondary-text-color);
+}
+.gdt-btn-secondary:hover {
+    background: var(--page-teritary-color);
+}
+
+/* Outline */
+.gdt-btn-outline {
+    background: transparent;
+    border: 2px solid var(--page-primary-color);
+    color: var(--page-primary-color);
+}
+.gdt-btn-outline:hover {
+    background: var(--page-highlight-color);
+}
+
+
+
+/* ========= Cards ========= */
+
+.gdt-card {
+    background: var(--page-background-main-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--page-shadow-color);
+    box-sizing: border-box;
+}
+
+
+
+/* ========= Input Fields ========= */
+
+.gdt-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--page-highlight-color-shade2);
+    background: var(--page-background-main-color);
+    color: var(--page-text-color);
+    box-sizing: border-box;
+}
+.gdt-input:focus {
+    outline: none;
+    border-color: var(--page-primary-color);
+    background: var(--page-highlight-color);
+}
+
+
+
+/* ========= Toggles (Switch) ========= */
+
+.gdt-switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background: var(--page-highlight-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.gdt-switch::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 3px;
+    left: 3px;
+    background: var(--page-background-main-color);
+    border-radius: 50%;
+    transition: 0.25s;
+}
+
+.gdt-switch.active {
+    background: var(--page-primary-color);
+}
+.gdt-switch.active::after {
+    transform: translateX(24px);
+}
+
+
+
+/* ========= Alerts ========= */
+
+.gdt-alert {
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px var(--page-shadow-color);
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.gdt-alert-info {
+    background: var(--page-highlight-color);
+    color: var(--page-text-color);
+}
+
+.gdt-alert-success {
+    background: rgba(0,255,0,0.08);
+    color: rgb(0,150,0);
+}
+
+.gdt-alert-warning {
+    background: rgba(255,200,0,0.2);
+    color: rgb(190,120,0);
+}
+
+.gdt-alert-error {
+    background: rgba(255,0,0,0.15);
+    color: rgb(180,0,0);
+}
+
+
+
+/* ========= Modal ========= */
+
+.gdt-modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.gdt-modal {
+    background: var(--page-background-main-color);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 25px var(--page-shadow-color);
+}
+
+.gdt-modal-bg.show {
+    display: flex;
+}
+
+
+/* ========= Dropdown ========= */
+
+.gdt-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.gdt-dropdown-btn {
+    cursor: pointer;
+}
+
+.gdt-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--page-background-main-color);
+    box-shadow: 0 0 15px var(--page-shadow-color);
+    border-radius: 8px;
+    padding: 5px 0;
+    min-width: 150px;
+    display: none;
+    z-index: 10;
+}
+
+.gdt-dropdown-menu.show {
+    display: block;
+}
+
+.gdt-dropdown-menu button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+}
+.gdt-dropdown-menu button:hover {
+    background: var(--page-highlight-color);
+}
+
+
+/* ========= Accordion ========= */
+
+.gdt-accordion-item {
+    background: var(--page-background-main-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px var(--page-shadow-color);
+    margin-bottom: 10px;
+}
+
+.gdt-accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    background: var(--page-highlight-color);
+    font-weight: bold;
+}
+
+.gdt-accordion-content {
+    height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+
+/* ========= Tabs ========= */
+
+.gdt-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--page-highlight-color-shade2);
+}
+
+.gdt-tab {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.gdt-tab.active {
+    border-color: var(--page-primary-color);
+    color: var(--page-primary-color);
+}
+
+.gdt-tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.gdt-tab-content.show {
+    display: block;
+}
+
+
+/* ========= Progress Bar ========= */
+
+.gdt-progress {
+    width: 100%;
+    height: 10px;
+    background: var(--page-highlight-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gdt-progress-inner {
+    height: 100%;
+    width: 0%;
+    background: var(--page-primary-color);
+    border-radius: 10px;
+    transition: width 0.4s;
+}
+
+
+/* ========= Badges ========= */
+
+.gdt-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    background: var(--page-primary-color);
+    color: var(--page-primary-text-color);
+}
+
+
+/* ========= Tooltip ========= */
+
+.gdt-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.gdt-tooltip:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--page-background-main-color);
+    color: var(--page-text-color);
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--page-shadow-color);
+    white-space: nowrap;
+}
+
+
+/* ========= Sidebar Layout ========= */
+
+.gdt-sidebar {
+    width: 250px;
+    background: var(--page-background-main-color);
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--page-shadow-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.gdt-sidebar button {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+}
+.gdt-sidebar button:hover {
+    background: var(--page-highlight-color);
+}
+
+
+/* ========= Grid System ========= */
+
+.gdt-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.gdt-col {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gdt-col-6 {
+    width: 50%;
+}
+
+.gdt-col-4 {
+    width: 33.33%;
+}
+
+.gdt-col-3 {
+    width: 25%;
+}
+
+@media (max-width: 700px) {
+    .gdt-col-6,
+    .gdt-col-4,
+    .gdt-col-3 {
+        width: 100%;
+    }
+}
