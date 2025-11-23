@@ -105,7 +105,7 @@ Responsive nav bar with **menu toggle for small screens**.
 <script>
     document.getElementById("navbar-menu").addEventListener('click', ()=>{
         (document.getElementById("nav-menu-option-elm").style.height == "0px")?
-            document.getElementById("nav-menu-option-elm").style.height = documentgetElementById("nav-menu-option-elm").scrollHeight + 'px' : document.getElementByI("nav-menu-option-elm").style.height = '0px';
+            document.getElementById("nav-menu-option-elm").style.height = documentgetElementById("nav-menu-option-elm").scrollHeight + 'px' : document.getElementById("nav-menu-option-elm").style.height = '0px';
     })
 </script>
 ```
